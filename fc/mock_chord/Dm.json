@@ -1,0 +1,22 @@
+{
+  "chord" : "Dm",
+  "e2":
+  {
+    "fret": 1,
+    "finger": 1
+  },
+  "b":
+  {
+    "fret": 3,
+    "finger": 3
+  },
+  "g":
+  {
+    "fret": 2,
+    "finger": 2
+  },
+  "d":
+  {
+    "fret": 0
+  }
+}

@@ -12,6 +12,6 @@ MIT [http://www.opensource.org/licenses/mit-license.php]
 
 ## INSTALLATION:
 
-Right now, everything just runs as is in any browser, so long as your environment/browser combo allows file access to relative files. Run locally, I had to run Chrome with this switch:
+Right now, everything in /fc/ just runs as is in any browser, so long as your environment/browser combo allows file access to relative files. Run locally, I had to run Chrome with this switch:
 
 --allow-file-access-from-files

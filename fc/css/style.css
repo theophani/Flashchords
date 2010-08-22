@@ -202,24 +202,24 @@ button {  width: auto; overflow: visible; }
     Author: Tiffany Conroy
  */
 
-body { background-color: #eee; margin: 100px; }
-.flashchord { background-color: #fff;  background-image: url(fret.gif); display:block; width: 397px; margin: auto; }
+body { background-color: #eee; margin: 100px 0; }
+.flashchord { display:block; width: 397px; margin: auto; min-height: 243px; }
 h1 { background-color: #eee; line-height: 2em; font-size: 50px; }
-.string { height: 5px; border-top: solid 3px #888; margin-top: 20px; position: relative; }
+.string { height: 25px; border-top: solid 3px #888; position: relative; background-image: url(fret.gif);  }
 .quiet { border-color: #e5e5e5; }
 .string_e { height: 0; }
 .string_e2 { margin-top: 0; }
-.fret { height: 20px; width: 97px; margin-top: -17px; margin-left: 0.5em; text-align: center; }
-.fret_1 { }
-.fret_2 { margin-left: 100px;}
-.fret_3 { margin-left: 200px;}
-.fret_4 { margin-left: 300px;}
-.fret_5 { margin-left: 400px;}
+.fret { height: 20px; margin-top: -15px; text-align: center; }
+.fret_1 { margin-left:  37px; }
+.fret_2 { margin-left: 137px;}
+.fret_3 { margin-left: 237px;}
+.fret_4 { margin-left: 337px;}
+.fret_5 { margin-left: 437px;}
 .finger {
-  color: #fff; background-color: #222; font-size: 20px; line-height: 1.5em; padding: 0 5px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius:    15px;
-  border-radius:         15px;
+  color: #fff; background-color: #222; font-size: 20px; line-height: 1.3em; display: block; width: 26px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius:    13px;
+  border-radius:         13px;
 }
 
 

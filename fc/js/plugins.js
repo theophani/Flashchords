@@ -543,33 +543,34 @@ turns a chord name into a chord
 */
 (function($){
 
-  function buildStringString(name,string) {
+  function buildStringString(name,string,hidden) {
+    string_class = hidden ? 'hidden string' : 'string'; 
     var string = string || {};
-    var stringString = '<div class="string string_'+name+' quiet"></div>';
+    var stringString = '<div class="'+string_class+' string_'+name+' quiet"></div>';
      if (string.fret && string.finger) {
-       stringString = '<div class="string string_'+name+'"><div class="fret fret_'+string.fret+'"><span class="finger '+string.finger+'">'+string.finger+'</span></div></div>';
+       stringString = '<div class="'+string_class+' string_'+name+'"><div class="fret fret_'+string.fret+'"><span class="finger '+string.finger+'">'+string.finger+'</span></div></div>';
      } else if (string.fret != null ) {
-       stringString = '<div class="string string_'+name+'"><div class="fret fret_'+string.fret+'"></div></div>';
+       stringString = '<div class="'+string_class+' string_'+name+'"><div class="fret fret_'+string.fret+'"></div></div>';
      }
      return stringString;
   }
 
   $.fn.extend({
-    flashchord: {
-      var reveal = function (){};
-      return (function(json,hidden) {
-                hidden = hidden || false;
-                this.addClass('flashchord');
-                this.html('<h1>'+json.chord+'</h1>');
-                this.append(buildStringString("e2", json.e2));
-                this.append(buildStringString("b" , json.b ));
-                this.append(buildStringString("g" , json.g ));
-                this.append(buildStringString("d" , json.d ));
-                this.append(buildStringString("a" , json.a ));
-                this.append(buildStringString("e" , json.e ));
-              });  
+    flashchord: function(json,hidden) {
+      hidden = hidden || false;
+      this.addClass('flashchord');
+      this.html('<h1>'+json.chord+'</h1>');
+      this.append(buildStringString("e2", json.e2, hidden));
+      this.append(buildStringString("b" , json.b , hidden));
+      this.append(buildStringString("g" , json.g , hidden));
+      this.append(buildStringString("d" , json.d , hidden));
+      this.append(buildStringString("a" , json.a , hidden));
+      this.append(buildStringString("e" , json.e , hidden));
+    },
+    flashchordReveal: function(delay,duration) {
+      var delay = delay || 1000;
+      var duration = duration || 1000;
     }
-    
   });
   
 })(jQuery);

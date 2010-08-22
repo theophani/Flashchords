@@ -1,34 +1,17 @@
-###  HTML5 Boilerplate
+###  Flashchords
 
-## CHANGELOG:
+## WTF:
 
-v0.9 -August 10th, 2010 - Initial release
+I want to be better at JavaScript, running my own web services, using proper development tools, and the acoustic guitar. If you are reading this sentence, then you might share some of those desires as well. Really, if not, then I can only conclude you are, in some sense, stalking me.
+
+I'm a visual and hands-on learner. I wrote this app to serve three purposes: test out a number of frameworks and ideas; to do so "the right way" instead of just how I have always done it, and most importantly, to create a tool that will help me learn guitar chords by name instead of just in the context of a song.
 
 ## LICENSE:
 
-The Unlicense (aka: public domain) http://unlicense.org
+MIT [http://www.opensource.org/licenses/mit-license.php]
 
 ## INSTALLATION:
 
-This is a set of files that a front-end developer can use to get started on a website, with following included:
+Right now, everything just runs as is in any browser, so long as your environment/browser combo allows file access to relative files. Run locally, I had to run Chrome with this switch:
 
-    1. Cross-browser compatible (IE6, yeah we got that.)
-    2. HTML5 ready. Use the new tags with certainty.
-    3. Optimal caching and compression rules for grade-A performance
-    4. Best practice site configuration defaults
-    5. Think there's too much? The HTML5 Boilerplate is delete-key friendly. :)
-    6. Mobile browser optimizations
-    7. Progressive enhancement graceful degredation ........ yeah yeah we got that
-    8. IE specific classes for maximum cross-browser control
-    9. Want to write unit tests but lazy? A full, hooked up test suite is waiting for you.
-    10. Javascript profiling.. in IE6 and IE7? Sure, no problem.
-    11. Console.log nerfing so you won't break anyone by mistake.
-    12. Never go wrong with your doctype or markup!
-    13. An optimal print stylesheet, performance optimized
-    14. iOS, Android, Opera Mobile-adaptable markup and CSS skeleton.
-    15. IE6 pngfix baked in.
-    16. jQuery, waiting for you
-    
-
-There will be two releases: a documented release, which is exactly what you see here, and a production release, with most of the descriptive comments stripped out.
-
+--allow-file-access-from-files

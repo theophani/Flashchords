@@ -543,33 +543,37 @@ turns a chord name into a chord
 */
 (function($){
 
-  function buildStringString(name,string,hidden) {
-    string_class = hidden ? 'hidden string' : 'string'; 
-    var string = string || {};
-    var stringString = '<div class="'+string_class+' string_'+name+' quiet"></div>';
-     if (string.fret && string.finger) {
-       stringString = '<div class="'+string_class+' string_'+name+'"><div class="fret fret_'+string.fret+'"><span class="finger '+string.finger+'">'+string.finger+'</span></div></div>';
-     } else if (string.fret != null ) {
-       stringString = '<div class="'+string_class+' string_'+name+'"><div class="fret fret_'+string.fret+'"></div></div>';
-     }
-     return stringString;
+  function buildStringElement(s,hidden) {
+    var s = s || { "tuning": "" };
+    var s_output = $('<div class="string s_'+s.tuning+'" />');
+    if (s.fret != null) {
+      s_output.append(
+        $('<div class="fret fr_'+s.fret+'" />').append(
+          function() {
+            return (s.finger ? '<span class="finger fi_'+s.finger+'">'+s.finger+'</span>' : null );
+          }));
+    } else {
+      s_output.addClass('quiet');
+    }
+    if (hidden) s_output.addClass('hidden');
+    return s_output;
   }
 
   $.fn.extend({
-    flashchord: function(json,hidden) {
+    flashchord: function(json,hidden,delay,duration) {
       hidden = hidden || false;
       this.addClass('flashchord');
       this.html('<h1>'+json.chord+'</h1>');
-      this.append(buildStringString("e2", json.e2, hidden));
-      this.append(buildStringString("b" , json.b , hidden));
-      this.append(buildStringString("g" , json.g , hidden));
-      this.append(buildStringString("d" , json.d , hidden));
-      this.append(buildStringString("a" , json.a , hidden));
-      this.append(buildStringString("e" , json.e , hidden));
+      for ( s in json.strings ) {
+        this.append(buildStringElement(json.strings[s], hidden));
+      }
+      if (hidden) $(this).flashchordReveal();
     },
     flashchordReveal: function(delay,duration) {
       var delay = delay || 1000;
       var duration = duration || 1000;
+      var that = this;
+      setTimeout(function(){$(that).find('.string').fadeIn(duration)},delay);
     }
   });
   

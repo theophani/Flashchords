@@ -36,19 +36,12 @@ $(document).ready(function() {
         dataType: 'json',
         context: $('#main'),
         success: function(json) {
-          $(this).flashchord(json);
-          $(this).find('.string').hide();
-          that = this;
-          setTimeout(function(){$(that).find('.string').fadeIn(1000)},1000);
+          $(this).flashchord(json,true);
         }
       });
-      //i++;
-      //if (i>=chords.length) i = 0;
       setTimeout(showFlashCard,period);
     }
     showFlashCard();
-
-  
 
 })(jQuery);
 

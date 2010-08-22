@@ -1,30 +1,38 @@
 {
   "chord" : "G",
-  "e2":
-  {
-    "fret": 3,
-    "finger": 3
-  },
-  "b":
-  {
-    "fret": 0
-  },
-  "g":
-  {
-    "fret": 0
-  },
-  "d":
-  {
-    "fret": 0
-  },
-  "a":
-  {
-    "fret": 2,
-    "finger": 1
-  },
-  "e":
-  {
-    "fret": 3,
-    "finger": 2
+  "strings" : {
+    "1":
+    {
+      "tuning" : "e2",
+      "fret": 3,
+      "finger": 3
+    },
+    "2":
+    {
+      "tuning" : "b",
+      "fret": 0
+    },
+    "3":
+    {
+      "tuning" : "g",
+      "fret": 0
+    },
+    "4":
+    {
+      "tuning" : "d",
+      "fret": 0
+    },
+    "5":
+    {
+      "tuning" : "a",
+      "fret": 2,
+      "finger": 1
+    },
+    "6":
+    {
+      "tuning" : "e",
+      "fret": 3,
+      "finger": 2
+    }
   }
 }

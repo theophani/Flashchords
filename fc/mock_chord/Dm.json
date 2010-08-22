@@ -1,22 +1,36 @@
 {
   "chord" : "Dm",
-  "e2":
-  {
-    "fret": 1,
-    "finger": 1
-  },
-  "b":
-  {
-    "fret": 3,
-    "finger": 3
-  },
-  "g":
-  {
-    "fret": 2,
-    "finger": 2
-  },
-  "d":
-  {
-    "fret": 0
+  "strings" : {
+    "1":
+    {
+      "tuning" : "e2",
+      "fret": 1,
+      "finger": 1
+    },
+    "2":
+    {
+      "tuning" : "b",
+      "fret": 3,
+      "finger": 3
+    },
+    "3":
+    {
+      "tuning" : "g",
+      "fret": 2,
+      "finger": 2
+    },
+    "4":
+    {
+      "tuning" : "d",
+      "fret": 0
+    },
+    "5":
+    {
+      "tuning" : "a"
+    },
+    "6":
+    {
+      "tuning" : "e"
+    }
   }
 }

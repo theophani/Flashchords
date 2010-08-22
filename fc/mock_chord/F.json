@@ -1,0 +1,33 @@
+{
+  "chord" : "F",
+  "e2":
+  {
+    "fret": 1,
+    "finger": 1
+  },
+  "b":
+  {
+    "fret": 1,
+    "finger": 1
+  },
+  "g":
+  {
+    "fret": 2,
+    "finger": 2
+  },
+  "d":
+  {
+    "fret": 3,
+    "finger": 3
+  },
+  "a":
+  {
+    "fret": 3,
+    "finger": 2
+  },
+  "e":
+  {
+    "fret": 1,
+    "finger": 1
+  }
+}

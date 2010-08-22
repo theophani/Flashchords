@@ -175,7 +175,8 @@ button {  width: auto; overflow: visible; }
 
 /* Hide for both screenreaders and browsers
    css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden { display:none; visibility:hidden; } 
+/* .hidden { display:none; visibility:hidden; } */
+.hidden { display:none; } 
 
 /* Hide only visually, but have it available for screenreaders 
    www.webaim.org/techniques/css/invisiblecontent/ 
@@ -201,15 +202,25 @@ button {  width: auto; overflow: visible; }
     Author: Tiffany Conroy
  */
 
-.string { height: 20px; width: 400px; border-top: solid 5px #222; }
-
-
-
-
-
-
-
-
+body { background-color: #eee; margin: 100px; }
+.flashchord { background-color: #fff;  background-image: url(fret.gif); display:block; width: 397px; margin: auto; }
+h1 { background-color: #eee; line-height: 2em; font-size: 50px; }
+.string { height: 5px; border-top: solid 3px #888; margin-top: 20px; position: relative; }
+.quiet { border-color: #e5e5e5; }
+.string_e { height: 0; }
+.string_e2 { margin-top: 0; }
+.fret { height: 20px; width: 97px; margin-top: -17px; margin-left: 0.5em; text-align: center; }
+.fret_1 { }
+.fret_2 { margin-left: 100px;}
+.fret_3 { margin-left: 200px;}
+.fret_4 { margin-left: 300px;}
+.fret_5 { margin-left: 400px;}
+.finger {
+  color: #fff; background-color: #222; font-size: 20px; line-height: 1.5em; padding: 0 5px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius:    15px;
+  border-radius:         15px;
+}
 
 
 /* 

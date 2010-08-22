@@ -19,22 +19,32 @@ $(document).ready(function() {
 
 (function($){
 
-    var chords = ['A','Am','C','D','Dm','D7','E','Em','G'];
-    var i = 0;
+    var chords = ['A','Am','C','D','Dm','D7','E','Em','F','G'],
+        i = 0, old = 0;
 
-    function showFlashCard() {
+    function showFlashCard(period) {
+      period = period || 4000;
+      
+      // don't show the same one again
+      while ( i==old ) {
+        i =  Math.floor( Math.random() * chords.length );
+      }
+      old = i;
+      
       $.ajax({
         url: '/chord/'+chords[i],
         dataType: 'json',
         context: $('#main'),
         success: function(json) {
           $(this).flashchord(json);
-          //$(this).flashchordReveal();
+          $(this).find('.string').hide();
+          that = this;
+          setTimeout(function(){$(that).find('.string').fadeIn(1000)},1000);
         }
       });
-      i++;
-      if (i>=chords.length) i = 0;
-      setTimeout(showFlashCard,5000);
+      //i++;
+      //if (i>=chords.length) i = 0;
+      setTimeout(showFlashCard,period);
     }
     showFlashCard();
 

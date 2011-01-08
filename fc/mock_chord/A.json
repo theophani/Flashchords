@@ -10,19 +10,19 @@
     {
       "tuning" : "b",
       "fret": 2,
-      "finger": 3
+      "finger": 4
     },
     "3":
     {
       "tuning" : "g",
       "fret": 2,
-      "finger": 2
+      "finger": 3
     },
     "4":
     {
       "tuning" : "d",
       "fret": 2,
-      "finger": 1
+      "finger": 3
     },
     "5":
     {

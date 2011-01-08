@@ -1,0 +1,37 @@
+{
+  "chord" : "H",
+  "strings" : {
+    "1":
+    {
+      "tuning" : "e2"
+    },
+    "2":
+    {
+      "tuning" : "b"
+    },
+    "3":
+    {
+      "tuning" : "g",
+      "fret": 4,
+      "finger": 2
+    },
+    "4":
+    {
+      "tuning" : "d",
+      "fret": 4,
+      "finger": 3
+    },
+    "5":
+    {
+      "tuning" : "a",
+      "fret": 4,
+      "finger": 4
+    },
+    "6":
+    {
+      "tuning" : "e",
+      "fret": 3,
+      "finger": 1
+    }
+  }
+}

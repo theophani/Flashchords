@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 (function($){
 
-    var chords = ['A','Am','C','D','Dm','D7','E','Em','F','G'],
+    var chords = ['A','Am','C','D','Dm','D7','E','Em','F','G', 'H'],
         i = 0, old = 0;
 
     function showFlashCard(period) {

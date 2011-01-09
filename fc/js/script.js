@@ -69,7 +69,7 @@
     return;
   });
 
-  var chords = ['A','Am','C','D','Dm','D7','E','Em','F','G', 'H'],
+  var chords = [{n:'A'},{n:'Am'},{n:'C'},{n:'D'},{n:'Dm'},{n:'D7'},{n:'E'},{n:'Em'},{n:'F'},{n:'G'},{n:'H'}],
       i = 0, old = 0;
   var default_period = 4000;
 
@@ -82,14 +82,23 @@
     }
     old = i;
     
-    $.ajax({
-      url: '/chord/'+chords[i],
-      dataType: 'json',
-      context: $('#main'),
-      success: function(json) {
-        $(this).flashchord({json : json, hidden: true});
-      }
-    });
+    if (chords[i].json) {
+      // just used the stored copy
+      $('#main').flashchord({json : chords[i].json, hidden: true});
+    } else {
+      // else fetch and store the json
+      $.ajax({
+        url: '/chord/'+chords[i].n,
+        dataType: 'json',
+        context: $('#main'),
+        success: function(json) {
+          chords[i].json = json;
+          console.log(chords[i].json);
+          $(this).flashchord({json : json, hidden: true});
+        }
+      });  
+    }
+        
     setTimeout(showFlashCard,period);
   };
   

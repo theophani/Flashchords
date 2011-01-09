@@ -32,14 +32,17 @@
   $.fn.extend({
     flashchord : function (options) {
       var json = options.json;
+      // unimplemented option to not show the chord
       var hidden = options.hidden || false;
       var s;
       this.addClass('flashchord');
       this.html('<h1>'+json.chord+'</h1>');
-      for ( s in json.strings ) {
-        this.append(buildStringElement({ s: json.strings[s], hidden : hidden }));
+      if (hidden) {
+        for ( s in json.strings ) {
+          this.append(buildStringElement({ s: json.strings[s], hidden : hidden }));
+        }
+        $(this).flashchordReveal(options);
       }
-      if (hidden) { $(this).flashchordReveal(options); }
     },
     flashchordReveal : function (options) {
       var delay = options.delay || 1000;
@@ -73,10 +76,11 @@
       i = 0, old = 0;
   var default_period = 4000;
 
-  var showFlashCard = function (period) {
-    period = period || default_period;
+  var showFlashCard = function (options) {
+    options = options || {};
+    var period = options.period || default_period;
     
-    // don't show the same one again
+    // don't show the same one twice in a row
     while ( i === old ) {
       i =  Math.floor( Math.random() * chords.length );
     }
@@ -93,13 +97,12 @@
         context: $('#main'),
         success: function(json) {
           chords[i].json = json;
-          console.log(chords[i].json);
           $(this).flashchord({json : json, hidden: true});
         }
       });  
     }
-        
-    setTimeout(showFlashCard,period);
+    
+    setTimeout(function () { showFlashCard(options); }, period);
   };
   
   showFlashCard();

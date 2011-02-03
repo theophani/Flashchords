@@ -16,7 +16,7 @@
     var s = options.s || { "tuning": "" };
     var hidden = options.hidden;
     var s_output = $('<div class="string s_'+s.tuning+'" />');
-    if (s.fret !== null) {
+    if (s.fret !== undefined) {
       s_output.append(
         $('<div class="fret fr_'+s.fret+'" />').append(
           function() {
@@ -87,7 +87,7 @@
     old = i;
     
     if (chords[i].json) {
-      // just used the stored copy
+      // just use the stored copy
       $('#main').flashchord({json : chords[i].json, hidden: true});
     } else {
       // else fetch and store the json
